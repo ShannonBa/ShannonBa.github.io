@@ -7,3 +7,10 @@ output: html_document
 [Home](https://shannonba.github.io/)
 
 <a href="Resume.pdf">Resume</a>
+
+<style>
+  body {
+     background-color: #FFEABF;
+    margin-top: 50px;
+  }
+</style>

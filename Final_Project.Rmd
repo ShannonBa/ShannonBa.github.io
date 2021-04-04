@@ -4,16 +4,18 @@ author: "Shannon Baker"
 output: html_document
 ---
 
-#Final Project
-
 [Final Project R Script](https://github.com/ShannonBa/Data_Course_BAKER/blob/main/Final_Project/Final_Project_script.R)
 
-My final prject review how images were created to analyze what genes in mice affect aging and how these genes can be changed to reverse aging in mice. 
+My final project review how images were created to analyze what genes in mice affect aging and how these genes can be changed to reverse aging in mice. 
+
+[Reprogramming to recover youthful epigenetic information and restore vision](https://rdcu.be/ch1re)
 
 <style>
   body {
+    background-color: #FFEABF;
     margin-top: 50px;
   }
+
  /*Navigation Panel*/
   /*Navigation panel position - ul, li, li a, and .active*/
     ul{
@@ -49,10 +51,9 @@ My final prject review how images were created to analyze what genes in mice aff
       }
 </style>
 
-<iframe id="Resume 2" src="document.pdf"></iframe>
   <ul>
     <li><a href="Index.html">Home</a></li>
     <li><a href="AboutMe.html">About Me</a></li>
     <li><a class="active" href="Final_Project.html">Final Project</a></li>
-     <li><a href="hobbies.html">Hobbies</a></li>
+     <li><a href="Hobbies.html">Hobbies</a></li>
   </ul>

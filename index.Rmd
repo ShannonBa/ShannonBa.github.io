@@ -7,10 +7,11 @@ toc: yes
 
 ___
 
-[About me](https://shannonba.github.io/AboutMe) | [Final Project](https://shannonba.github.io/Final_Project)
+[About me](https://shannonba.github.io/AboutMe) | [Final Project](https://shannonba.github.io/Final_Project) | [Hobbies](https://shannonba.github.io/Hobbies)
 
 <style>
   body {
+     background-color: #FFEABF;
     margin-top: 50px;
   }
  /*Navigation Panel*/
@@ -52,5 +53,5 @@ ___
     <li><a class="active" href="Index.html">Home</a></li>
     <li><a href="AboutMe.html">About Me</a></li>
     <li><a href="Final_Project.html">Final Project</a></li>
-     <li><a href="hobbies.html">Hobbies</a></li>
+     <li><a href="Hobbies.html">Hobbies</a></li>
   </ul>

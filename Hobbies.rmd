@@ -31,7 +31,7 @@ ___
     ul {
         position: fixed;
         top: 0; /*Does Nothing*/
-        width: 85%; /*Adjusts the width of the background on the NAVIGATION BAR.*/
+        width: 84%; /*Adjusts the width of the background on the NAVIGATION BAR.*/
       }
     li {
         float: left;

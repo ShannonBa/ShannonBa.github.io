@@ -10,6 +10,10 @@ My final project review how images were created to analyze what genes in mice af
 
 [Reprogramming to recover youthful epigenetic information and restore vision](https://rdcu.be/ch1re)
 
+___
+
+[Home](https://shannonba.github.io/index.html) | [About me](https://shannonba.github.io/AboutMe) | [Final Project](https://shannonba.github.io/Final_Project) | [Hobbies](https://shannonba.github.io/Hobbies)
+
 <style>
   body {
     background-color: #FFEABF;

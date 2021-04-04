@@ -7,6 +7,8 @@ output: html_document
 
 Shannon Baker
 
+She/her
+
 shannonbaker435@gmail.com
 
 Biotechnology Major at [UVU](https://www.uvu.edu/)
@@ -14,7 +16,17 @@ Biotechnology Major at [UVU](https://www.uvu.edu/)
 <a href="Resume.pdf">Resume</a>
 
 
+### Fun Facts:
 
+I'm from a coal mining community in [Southeastern Utah](https://www.pricecityutah.com/).
+
+I am the middle child of five children.
+
+The farthest I have been from Utah is Miami, Florida. 
+
+___
+
+[Home](https://shannonba.github.io/index.html) | [About me](https://shannonba.github.io/AboutMe) | [Final Project](https://shannonba.github.io/Final_Project) | [Hobbies](https://shannonba.github.io/Hobbies)
 
 
 <html>

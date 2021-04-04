@@ -4,6 +4,15 @@ author: "Shannon Baker"
 output: html_document
 toc: yes
 ---
+<div style="width: 100%; height: 400px; overflow: hidden">
+ <img src="leaves_in_rain.jpg" style="margin-top: 15px; float: left; display: block;"/>
+   <div class="centered">Centered</div>
+</div>
+
+##
+
+Welcome to my website! There is information about me, Shannon Baker, on different tabs. Thank you for visiting!
+
 
 ___
 
@@ -47,6 +56,8 @@ ___
     .active {
         background-color: #F0BB53;
       }
+     
+
 </style>
 
   <ul>

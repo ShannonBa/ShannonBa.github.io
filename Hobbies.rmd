@@ -4,7 +4,12 @@ author: "Shannon Baker"
 output: html_document
 ---
 
-I have no hobbies. I enjoy reading and sitting on the couch and annoying my sisters with nothingness. Sorry I'm so boring. 
+
+#
+I enjoy eating chocolate and making pies. I spend my free time reading fiction and annoying my sisters with nothingness.  
+   
+
+<img src="pear_pie.jpg" style="width:33.3%"><img src="cherry_pie.jpg" style="width:33.3%"><img src="apple_pie.jpg" style="width:33.3%">
 
 ___
 
@@ -31,7 +36,7 @@ ___
     ul {
         position: fixed;
         top: 0; /*Does Nothing*/
-        width: 84%; /*Adjusts the width of the background on the NAVIGATION BAR.*/
+        width: 85%; /*Adjusts the width of the background on the NAVIGATION BAR.*/
       }
     li {
         float: left;

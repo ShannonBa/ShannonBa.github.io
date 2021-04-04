@@ -1,8 +1,9 @@
 ---
 title: "Resume"
 author: "Shannon Baker"
-date: "4/3/2021"
 output: html_document
 ---
 
-<iframe id="Resume 2" src="document.pdf"></iframe>
+[Home](https://shannonba.github.io/)
+
+<a href="Resume.pdf">Resume</a>

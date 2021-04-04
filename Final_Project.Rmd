@@ -1,13 +1,14 @@
 ---
-title: "Home"
+title: "Final Project"
 author: "Shannon Baker"
 output: html_document
-toc: yes
 ---
 
-___
+#Final Project
 
-[About me](https://shannonba.github.io/AboutMe) | [Final Project](https://shannonba.github.io/Final_Project)
+[Final Project R Script](https://github.com/ShannonBa/Data_Course_BAKER/blob/main/Final_Project/Final_Project_script.R)
+
+My final prject review how images were created to analyze what genes in mice affect aging and how these genes can be changed to reverse aging in mice. 
 
 <style>
   body {
@@ -48,9 +49,10 @@ ___
       }
 </style>
 
+<iframe id="Resume 2" src="document.pdf"></iframe>
   <ul>
-    <li><a class="active" href="Index.html">Home</a></li>
+    <li><a href="Index.html">Home</a></li>
     <li><a href="AboutMe.html">About Me</a></li>
-    <li><a href="Final_Project.html">Final Project</a></li>
+    <li><a class="active" href="Final_Project.html">Final Project</a></li>
      <li><a href="hobbies.html">Hobbies</a></li>
   </ul>

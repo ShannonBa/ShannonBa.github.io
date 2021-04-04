@@ -1,15 +1,40 @@
 ---
-title: "Home"
+title: "About Me"
 author: "Shannon Baker"
 output: html_document
-toc: yes
 ---
+<img src="Shannon_Baker_chrismas_lights_2020.jpg" style="width: 250px;"/>
 
-___
+Shannon Baker
 
-[About me](https://shannonba.github.io/AboutMe) | [Final Project](https://shannonba.github.io/Final_Project)
+shannonbaker435@gmail.com
 
+Biotechnology Major at [UVU](https://www.uvu.edu/)
+
+[Resume](https://shannonba.github.io/AboutMe/Resume)
+
+
+<html>
+<head>
 <style>
+body {
+    -webkit-animation: colorchange 60s infinite; 
+    animation: colorchange 60s infinite;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: #FFF7E7;}
+    25%  {background: #FFEDC6;}
+    50%  {background: #FFE4AB;}
+    75%  {background: #FFD887;}
+    100% {background: #FED06F;}
+}
+@keyframes colorchange {
+     0%  {background: #FED06F;}
+    25%  {background: #FFD887;}
+    50%  {background: #FFE4AB;}
+    75%  {background: #FFEDC6;}
+    100% {background: #FFF7E7;}
+}
   body {
     margin-top: 50px;
   }
@@ -47,10 +72,13 @@ ___
         background-color: #F0BB53;
       }
 </style>
-
+</head>
+<body>
   <ul>
-    <li><a class="active" href="Index.html">Home</a></li>
-    <li><a href="AboutMe.html">About Me</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="AboutMe.html">About Me</a></li>
     <li><a href="Final_Project.html">Final Project</a></li>
      <li><a href="hobbies.html">Hobbies</a></li>
   </ul>
+</body>
+</html>

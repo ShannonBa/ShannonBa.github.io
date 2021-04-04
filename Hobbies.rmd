@@ -47,7 +47,7 @@ I have no hobbies. I enjoy reading and sitting on the couch and annoying my sist
 </style>
 
   <ul>
-    <li><a href="Index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="AboutMe.html">About Me</a></li>
     <li><a href="Final_Project.html">Final Project</a></li>
      <li><a  class="active" href="Hobbies.html">Hobbies</a></li>

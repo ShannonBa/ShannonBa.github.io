@@ -1,15 +1,25 @@
 ---
 title: "Final Project"
 author: "Shannon Baker"
+mainfont: DejaVu Sans
 output: html_document
----
 
+---
 [Final Project R Script](https://github.com/ShannonBa/Data_Course_BAKER/blob/main/Final_Project/Final_Project_script.R)
 
-My final project review how images were created to analyze what genes in mice affect aging and how these genes can be changed to reverse aging in mice. 
+<br/>
 
-[Reprogramming to recover youthful epigenetic information and restore vision](https://rdcu.be/ch1re)
+### Introduction and Background  
 
+My final project reviews how plots were created in the the research article "[Reprogramming to recover youthful epigenetic information and restore vision](https://rdcu.be/ch1re)" by Lu et al.[*](#anchor) The paper analyzed what genes in mice are affected in aging and how these genes can be changed to reverse aging in mice. 
+
+For the experiment, mice eyes are looked at focusing on retinal ganglion cells. The genes __Oct4, Sox2, and Klf4 genes (OSK)__ were introduced with a dual adeno-associated virus (AAV). The OSK genes helped with axon regeneration by causing more expression of DNA demethylases TET1 and TET2. Due to The TET _demtheylase_ activity, _more_ genes were expressed in older mice because these genes were demethylated and open to transcription again. This demethylation allowed these suppressed genes to become more active in older mice, causing the gene expression to resemble younger mice gene expression.  
+
+The two figures being recreated compare the gene expression of young mice to old mice to OSK expressing mice. In older OSK mice, there is gene expression similar to young mice. This increased gene expression helps older mice with axon regeneration after injury and reverses vision loss in a mouse model of glaucoma and in aged mice.
+
+
+
+<br/>
 
 ```{r include=FALSE}
 ## load packages
@@ -20,36 +30,45 @@ library(gplots)
 library(ggplot2)
 library(viridis)
 library(RColorBrewer)
+library(kableExtra)
 ```
 
-#### Images I am trying to recreate: 
-<div style="width: 100%; height: 400px; overflow: hidden">
- <img src="heatmap.PNG" style="margin-top: 15px; float: left; display: block;"/>
-   <div class="centered">Centered</div>
-</div>
-This heatmap shows the genes that are actively expressed in young mice and 
-those that are less active in old mice. 
+### Images recreated from Fig. 4: 
+  
+  
+#### Heatmap  
+<p align="left">
+ ![Caption](./heatmap.PNG)
+ </p>
+This heatmap shows the genes that are actively expressed in young mice and those that are less active in old mice. The darker the color, the less that gene is expressed. There is a lot of darker color in the old mice that is due to more methylation inhibiting gene expression. 
 
-<div style="width: 100%; height: 400px; overflow: hidden">
- <img src="foldchange.PNG" style="margin-top: 15px; float: left; display: block;"/>
-   <div class="centered">Centered</div>
-</div>
-This volcano plot shows the genes that are significantly active in young mice, those genes that have decreased expression in old mice, and those genes that are increased in old mice with the OSK genes being expressed.
+<br/>
+
+#### Volcano plot  
+<p align="left">
+ ![](./foldchange.PNG)
+ </p>
+This volcano plot shows the genes that are significantly active in young mice, those genes that have decreased expression in old mice, and those genes that are increased in old mice with the OSK genes being expressed. The log2 is showing a fold change. For every fold change of 1, the expression is doubling. So, on the x-axis right side of the graph, this is showing genes that have increased expression in young mice. The left side is decreased gene expression in old mice. For the y-axis part of the graph, OSK expression is shown to increase gene expression in old mice (up higher) over old mice that do not have the induced OSK expression (down lower). 
 
 
 
-#### From the paper, there was no RStudio code avaialable, but the data used to create the two graphs was available.
-```{r echo=FALSE}
+
+
+<br/>
+
+### Re-creation  
+ From the paper, there was no RStudio code available, but the data used to create the two graphs was available. The data for both the heatmap and the volcano plot were together, but the data was formatted for optimal use in RStudio. 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 ### load data
 
 df <- read_csv("./41586_2020_2975_MOESM11_ESM.csv", skip=3)
-names(df)
 names(df) <- names(df) %>% str_replace_all(" ","_")
-nam <- "logFC (12 mo (+OSK)/12 mo (-OSK))"
-nam %>% str_replace_all(" ","_")
-glimpse(df) 
+#glimpse(df)
+skimr::skim_without_charts(df)
+#or kablextraa
 ```
-There are 464 genes analyzed over 5 5-month old mice, 6 12-month old mice with no OSK AAV added, 5 12-month old mice with an AAV added but with no OSK genes expressed, and 4 12-month old mice with the OSK genes being expressed. 
+<br/>
+There are 464 genes analyzed for five 5-month old mice, six 12-month old mice with no OSK AAV added, five 12-month old mice with an AAV added but with no OSK genes expressed, and four 12-month old mice with the OSK genes being expressed. 
 
 
 ```{r include=FALSE}
@@ -75,7 +94,18 @@ heatdf <- df[ ,c(
   "12_mo(+OSK)_rep4")]
 ```
 
-This is the heatmap created.
+
+<br/>
+
+
+### Heatmap created
+This heatmap is comparing gene expression in young, old, and OSK old mice.   
+  
+For the colors, the lighter, more yellow the color, the more active the gene is in that mouse. The darker, more purple the color, the less that gene is expressed in that mouse. Dark purple to black means that gene is not being expressed.   
+  
+The colored bar at the top is showing the different groups of mice. The __black__ line marks the four columns in the heatmap that represent the genes active in __5 month old mice__. __Grey__ represents __12 month old mice with no treatment__. __Red__ represents __12 month old mice with AVV treatment but no OSK expression__. __Blue__ represents __12 month old mice with AVV treatment to induce expression of the OSK genes__.  
+  
+
 ```{r echo=FALSE}
 #### Making heatmap ####
 heat_matrix <- as(heatdf, "matrix")
@@ -99,9 +129,11 @@ heatmap(heat_matrix, Colv = NA,
         margins = c(10,10),
         col=gene_colors)
 ```
+<br/>
 
-This is the volcano plot I was able to make. 
-The volcano plot was made from the QValues, as the p-value can give the expected false positive rate obtained by rejecting the null hypothesis for any result with an equal or smaller p-value, the q-value gives the expected pFDR obtained by rejecting the null hypothesis for any result with an equal or smaller q -value
+### Volcano plot created  
+The volcano plot was made from the q-alues, as the p-value can give the expected false positive rate obtained by rejecting the null hypothesis for any result with an equal or smaller p-value, the q-value gives the expected pFDR obtained by rejecting the null hypothesis for any result with an equal or smaller q-value.  
+  
 ```{r echo=FALSE}
 df %>%
   mutate(Color = case_when(QValue < 0.05 & QValue_2 > 0.05  ~ "red",
@@ -129,8 +161,17 @@ df %>%
 
 
 ```
+  
+<br/>
 
+### Conclusion  
 
+My heatmap and volcano plot lack certain features that the paper acquired, such as a different grouping of gene for the dendrogram of the heatmap and significance points of both old and upregulated sensory genes in mice for the volcano plot, but with the data provided, it makes sense how the authors Lu et al.[*](#anchor) came to their conclusions of OSK having a significant affect on old mice gene expression. In the paper, the researchers were trying to find a way to help older mice acquire the traits of younger mice to help with injury and diseases related to the eye such as glaucoma. From their experiment, they have shown that the genes OSK can have an affect on triggering demthylation of DNA and returning a cell to a phenotype more similar to that of a young mouse in a beneficial way.   
+
+<br/>
+
+### Article Reference: {#anchor}  
+Lu, Y., Brommer, B., Tian, X. et al. Reprogramming to recover youthful epigenetic information and restore vision. Nature 588, 124–129 (2020). https://doi.org/10.1038/s41586-020-2975-4
 
 
 ___
